@@ -1,0 +1,87 @@
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+    cursor: pointer;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.message {
+    position: absolute;
+    font-size: 50px;
+    line-height: 50px;
+    z-index: -1;
+    left: calc(50% - 25px);
+    top: calc(50% - 25px);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    margin: calc(50vh - 200px) auto 0 auto;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    transition: 1s;
+}
+
+.blue {
+    background-color: steelblue;
+}
+
+.gray {
+    background-color: dimgray;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.brown {
+    background-color: rosybrown;
+}
+
+.container:hover > .blue {
+    transition: 1s;
+    rotate: 90deg;
+    translate: -200px;
+}
+
+.container:hover > .gray {
+    transition: 1s;
+    rotate: -90deg;
+    translate: 200px;
+}
+
+.container:hover > .yellow {
+    transition: 1s;
+    rotate: -90deg;
+    translate: -200px;
+}
+
+.container:hover > .brown {
+    transition: 1s;
+    rotate: 90deg;
+    translate: 200px;
+}
